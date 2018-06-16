@@ -1,0 +1,20 @@
+{
+    "name": "poweruser/eliapp2",
+    "require": {
+        "phroute/phroute": "^2.1",
+        "sokil/php-upload": "dev-master"
+        
+
+    },
+
+
+    "autoload":{
+    	"psr-4":{
+    		"Eli\\": "src/",
+            "ElCont\\": "controllers/"
+    	}
+
+    }
+
+   
+}

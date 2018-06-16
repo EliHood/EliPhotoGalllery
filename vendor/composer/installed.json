@@ -1,0 +1,185 @@
+[
+    {
+        "name": "knplabs/gaufrette",
+        "version": "v0.6.0",
+        "version_normalized": "0.6.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/KnpLabs/Gaufrette.git",
+            "reference": "a7c71edef4528d9881f534515f9061660255afe3"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/KnpLabs/Gaufrette/zipball/a7c71edef4528d9881f534515f9061660255afe3",
+            "reference": "a7c71edef4528d9881f534515f9061660255afe3",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.6"
+        },
+        "conflict": {
+            "microsoft/windowsazure": "<0.4.3"
+        },
+        "require-dev": {
+            "akeneo/phpspec-skip-example-extension": "~1.2",
+            "amazonwebservices/aws-sdk-for-php": "1.5.*",
+            "aws/aws-sdk-php": "^2.4.12||~3",
+            "doctrine/dbal": ">=2.3",
+            "dropbox-php/dropbox-php": "*",
+            "google/apiclient": "~1.1.3",
+            "league/flysystem": "~1.0",
+            "microsoft/azure-storage-blob": "^1.0",
+            "mikey179/vfsstream": "~1.2.0",
+            "mongodb/mongodb": "^1.1",
+            "phpseclib/phpseclib": "^2.0",
+            "phpspec/phpspec": "~2.4",
+            "phpunit/phpunit": "^5.6.8",
+            "rackspace/php-opencloud": "^1.9.2"
+        },
+        "suggest": {
+            "ext-curl": "*",
+            "ext-fileinfo": "This extension is used to automatically detect the content-type of a file in the AwsS3, OpenCloud, AzureBlogStorage and GoogleCloudStorage adapters",
+            "ext-mbstring": "*",
+            "gaufrette/aws-s3-adapter": "to use AwsS3 adapter (supports SDK v2 and v3)",
+            "gaufrette/azure-blob-storage-adapter": "to use AzureBlobStorage adapter",
+            "gaufrette/doctrine-dbal-adapter": "to use DBAL adapter",
+            "gaufrette/flysystem-adapter": "to use Flysystem adapter",
+            "gaufrette/ftp-adapter": "to use Ftp adapter",
+            "gaufrette/gridfs-adapter": "to use GridFS adapter",
+            "gaufrette/in-memory-adapter": "to use InMemory adapter",
+            "gaufrette/local-adapter": "to use Local adapter",
+            "gaufrette/opencloud-adapter": "to use Opencloud adapter",
+            "gaufrette/phpseclib-sftp-adapter": "to use PhpseclibSftp adapter",
+            "gaufrette/zip-adapter": "to use Zip adapter",
+            "google/apiclient": "to use GoogleCloudStorage adapter",
+            "knplabs/knp-gaufrette-bundle": "to use with Symfony2"
+        },
+        "time": "2018-03-26T12:19:49+00:00",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "0.7.x-dev"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-0": {
+                "Gaufrette": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "The contributors",
+                "homepage": "http://github.com/knplabs/Gaufrette/contributors"
+            },
+            {
+                "name": "KnpLabs Team",
+                "homepage": "http://knplabs.com"
+            }
+        ],
+        "description": "PHP library that provides a filesystem abstraction layer",
+        "homepage": "http://knplabs.com",
+        "keywords": [
+            "abstraction",
+            "file",
+            "filesystem",
+            "media"
+        ]
+    },
+    {
+        "name": "phroute/phroute",
+        "version": "v2.1.0",
+        "version_normalized": "2.1.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/mrjgreen/phroute.git",
+            "reference": "dbe2b986f9ee1dd33dc956fcc35d1fa22e8e196c"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/mrjgreen/phroute/zipball/dbe2b986f9ee1dd33dc956fcc35d1fa22e8e196c",
+            "reference": "dbe2b986f9ee1dd33dc956fcc35d1fa22e8e196c",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.4.0"
+        },
+        "require-dev": {
+            "phpunit/phpunit": "*",
+            "satooshi/php-coveralls": "dev-master"
+        },
+        "time": "2015-07-22T20:46:43+00:00",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Phroute\\Phroute\\": "src/Phroute"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "BSD-3-Clause"
+        ],
+        "authors": [
+            {
+                "name": "Joe Green",
+                "email": "joe.green.0991@gmail.com"
+            }
+        ],
+        "description": "Fast, fully featured restful request router for PHP",
+        "keywords": [
+            "router",
+            "routing"
+        ]
+    },
+    {
+        "name": "sokil/php-upload",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/sokil/php-upload.git",
+            "reference": "3e0d7d91866781e9a19ab4d2ec3c443f0ca1666a"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/sokil/php-upload/zipball/3e0d7d91866781e9a19ab4d2ec3c443f0ca1666a",
+            "reference": "3e0d7d91866781e9a19ab4d2ec3c443f0ca1666a",
+            "shasum": ""
+        },
+        "require": {
+            "knplabs/gaufrette": ">=0.2.0",
+            "php": ">=5.3"
+        },
+        "require-dev": {
+            "phpunit/phpunit": ">=3.7.38 <6.0",
+            "satooshi/php-coveralls": ">=0.7.1 <2.0"
+        },
+        "suggest": {
+            "sokil/file-storage-bundle": "Symfony bundle"
+        },
+        "time": "2018-03-12T10:53:13+00:00",
+        "type": "library",
+        "installation-source": "source",
+        "autoload": {
+            "psr-4": {
+                "Sokil\\Upload\\": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Dmytro Sokil",
+                "email": "dmytro.sokil@gmail.com"
+            }
+        ],
+        "description": "File uploader"
+    }
+]
