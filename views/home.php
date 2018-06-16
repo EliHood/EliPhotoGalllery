@@ -15,7 +15,7 @@ use ElCont\UploadController as Image;
 
         $filename = $_FILES["profile_img"]["name"];
         $realname = "public/uploads/" . basename($filename);
-        $directory = dirname("public/uploads/");
+        $directory = $_SERVER['DOCUMENT_ROOT'] . "/public/uploads/";
 
         $path = $directory . basename($filename);
 
