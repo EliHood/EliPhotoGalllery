@@ -6,8 +6,19 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'Symfony\\Polyfill\\Mbstring\\' => array($vendorDir . '/symfony/polyfill-mbstring'),
+    'Symfony\\Component\\Translation\\' => array($vendorDir . '/symfony/translation'),
     'Sokil\\Upload\\' => array($vendorDir . '/sokil/php-upload/src'),
+    'Psr\\SimpleCache\\' => array($vendorDir . '/psr/simple-cache/src'),
+    'Psr\\Container\\' => array($vendorDir . '/psr/container/src'),
     'Phroute\\Phroute\\' => array($vendorDir . '/phroute/phroute/src/Phroute'),
+    'Illuminate\\Support\\' => array($vendorDir . '/illuminate/support'),
+    'Illuminate\\Database\\' => array($vendorDir . '/illuminate/database'),
+    'Illuminate\\Contracts\\' => array($vendorDir . '/illuminate/contracts'),
+    'Illuminate\\Container\\' => array($vendorDir . '/illuminate/container'),
     'Eli\\' => array($baseDir . '/src'),
+    'EliModel\\' => array($baseDir . '/models'),
     'ElCont\\' => array($baseDir . '/controllers'),
+    'Doctrine\\Common\\Inflector\\' => array($vendorDir . '/doctrine/inflector/lib/Doctrine/Common/Inflector'),
+    '' => array($vendorDir . '/nesbot/carbon/src'),
 );

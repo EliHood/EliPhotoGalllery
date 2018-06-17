@@ -6,39 +6,104 @@ namespace Composer\Autoload;
 
 class ComposerStaticInit85b743415e3d3e521beb0baa8f06f47c
 {
+    public static $files = array (
+        '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
+        '72579e7bd17821bb1321b87411366eae' => __DIR__ . '/..' . '/illuminate/support/helpers.php',
+    );
+
     public static $prefixLengthsPsr4 = array (
         'S' => 
         array (
+            'Symfony\\Polyfill\\Mbstring\\' => 26,
+            'Symfony\\Component\\Translation\\' => 30,
             'Sokil\\Upload\\' => 13,
         ),
         'P' => 
         array (
+            'Psr\\SimpleCache\\' => 16,
+            'Psr\\Container\\' => 14,
             'Phroute\\Phroute\\' => 16,
+        ),
+        'I' => 
+        array (
+            'Illuminate\\Support\\' => 19,
+            'Illuminate\\Database\\' => 20,
+            'Illuminate\\Contracts\\' => 21,
+            'Illuminate\\Container\\' => 21,
         ),
         'E' => 
         array (
             'Eli\\' => 4,
+            'EliModel\\' => 9,
             'ElCont\\' => 7,
+        ),
+        'D' => 
+        array (
+            'Doctrine\\Common\\Inflector\\' => 26,
         ),
     );
 
     public static $prefixDirsPsr4 = array (
+        'Symfony\\Polyfill\\Mbstring\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/polyfill-mbstring',
+        ),
+        'Symfony\\Component\\Translation\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/translation',
+        ),
         'Sokil\\Upload\\' => 
         array (
             0 => __DIR__ . '/..' . '/sokil/php-upload/src',
+        ),
+        'Psr\\SimpleCache\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/psr/simple-cache/src',
+        ),
+        'Psr\\Container\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/psr/container/src',
         ),
         'Phroute\\Phroute\\' => 
         array (
             0 => __DIR__ . '/..' . '/phroute/phroute/src/Phroute',
         ),
+        'Illuminate\\Support\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/illuminate/support',
+        ),
+        'Illuminate\\Database\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/illuminate/database',
+        ),
+        'Illuminate\\Contracts\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/illuminate/contracts',
+        ),
+        'Illuminate\\Container\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/illuminate/container',
+        ),
         'Eli\\' => 
         array (
             0 => __DIR__ . '/../..' . '/src',
+        ),
+        'EliModel\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/models',
         ),
         'ElCont\\' => 
         array (
             0 => __DIR__ . '/../..' . '/controllers',
         ),
+        'Doctrine\\Common\\Inflector\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/doctrine/inflector/lib/Doctrine/Common/Inflector',
+        ),
+    );
+
+    public static $fallbackDirsPsr4 = array (
+        0 => __DIR__ . '/..' . '/nesbot/carbon/src',
     );
 
     public static $prefixesPsr0 = array (
@@ -56,6 +121,7 @@ class ComposerStaticInit85b743415e3d3e521beb0baa8f06f47c
         return \Closure::bind(function () use ($loader) {
             $loader->prefixLengthsPsr4 = ComposerStaticInit85b743415e3d3e521beb0baa8f06f47c::$prefixLengthsPsr4;
             $loader->prefixDirsPsr4 = ComposerStaticInit85b743415e3d3e521beb0baa8f06f47c::$prefixDirsPsr4;
+            $loader->fallbackDirsPsr4 = ComposerStaticInit85b743415e3d3e521beb0baa8f06f47c::$fallbackDirsPsr4;
             $loader->prefixesPsr0 = ComposerStaticInit85b743415e3d3e521beb0baa8f06f47c::$prefixesPsr0;
 
         }, null, ClassLoader::class);

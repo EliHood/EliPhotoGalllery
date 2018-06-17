@@ -2,16 +2,27 @@
 
 namespace Eli;
 
+
+
 class Config{
 
     public $settings = array(
-        'DB_HOST'=>'127.0.0.1',
-        'DB_USERNAME'=>'root',
-        'DB_PASSWORD'=>'root',
-        'DB_DATABASE'=>'elinew2',
-        'DB_PORT' => '8889'
-
+            'driver'    => 'mysql',
+            'port'      => '8889',
+            'host'      => '127.0.0.1',
+            'database'  => 'elinew2',
+            'username'  => 'root',
+            'password'  => 'root',
+            'charset'   => 'utf8',
+            'collation' => 'utf8_unicode_ci',
+            'prefix'    => '',
     );
+
+
+    public function get_settings()
+    {
+        return $this->settings;
+    }
 
     public function host()
     {

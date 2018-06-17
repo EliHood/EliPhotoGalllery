@@ -4,7 +4,8 @@ require_once 'paritals/nav.php';
 
 
 use Eli\Db as DB;
-use ElCont\UploadController as Image;
+use ElCont\UploadController as ImageCont;
+use EliModel\Image as Image;
 
 
     if(isset($_FILES['profile_img'])){
@@ -19,7 +20,7 @@ use ElCont\UploadController as Image;
 
         $dbh = new DB();
         $connect = $dbh->connect();
-        $image = new Image($connect);
+        $image = new ImageCont($connect);
 
         $filename = filter_var($_FILES["profile_img"]["name"],FILTER_SANITIZE_STRING);
         $realname = "public/uploads/" . basename($filename);
@@ -87,7 +88,7 @@ use ElCont\UploadController as Image;
 
 $dbh = new DB();
 $connect = $dbh->connect();
-$image = new Image($connect);
+$image = new ImageCont($connect);
 
 $photo =  $image->get_images();
 foreach($photo as $pic)

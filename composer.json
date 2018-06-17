@@ -2,7 +2,8 @@
     "name": "poweruser/eliapp2",
     "require": {
         "phroute/phroute": "^2.1",
-        "sokil/php-upload": "dev-master"
+        "sokil/php-upload": "dev-master",
+        "illuminate/database": "^5.6"
         
 
     },
@@ -11,7 +12,8 @@
     "autoload":{
     	"psr-4":{
     		"Eli\\": "src/",
-            "ElCont\\": "controllers/"
+            "ElCont\\": "controllers/",
+            "EliModel\\": "models/"
     	}
 
     }

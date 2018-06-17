@@ -4,6 +4,7 @@ namespace ElCont;
 
 use Eli\Db as DB;
 use PDO;
+use EliModel\Image as Image;
 use \Eli\View as View;
 
 class UploadController {
@@ -26,9 +27,8 @@ class UploadController {
     public function upload_image($filename, $image_name)
     {
 
-        $sql = "INSERT INTO images (img, image_name) VALUES (?, ?)";
-        $stmt = $this->connect->prepare($sql)->execute([$filename, $image_name]);
-        return $stmt; 
+        $image = Image::create(['img' => $filename, 'image_name' => $image_name]);
+        return $image; 
   
 
     }
@@ -41,18 +41,21 @@ class UploadController {
 
     public function get_images()
     {
-        try{
-            $sql = "SELECT * FROM images";
-            $sth = $this->connect->prepare($sql);
-            $sth->execute();
-            $result = $sth->fetchAll();
-            return $result;
+        // try{
+        //     $sql = "SELECT * FROM images";
+        //     $sth = $this->connect->prepare($sql);
+        //     $sth->execute();
+        //     $result = $sth->fetchAll();
+        //     return $result;
 
-        }
-        catch(PDOExeception $e)
-        {
-            echo $e->getMessage();
-        }
+        // }
+        // catch(PDOExeception $e)
+        // {
+        //     echo $e->getMessage();
+        // }
+
+        $images = Image::all(); 
+        return $images;
     }
 
 
