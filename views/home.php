@@ -9,11 +9,19 @@ use ElCont\UploadController as Image;
 
     if(isset($_FILES['profile_img'])){
 
+        $errors = array();
+
+        if ($_FILES['profile_img']['size'] > 1000000) {
+
+            throw new RuntimeException('Exceeded filesize limit.');
+  
+        }
+
         $dbh = new DB();
         $connect = $dbh->connect();
         $image = new Image($connect);
 
-        $filename = $_FILES["profile_img"]["name"];
+        $filename = filter_var($_FILES["profile_img"]["name"],FILTER_SANITIZE_STRING);
         $realname = "public/uploads/" . basename($filename);
         $directory = $_SERVER['DOCUMENT_ROOT'] . "/public/uploads/";
 
@@ -21,25 +29,47 @@ use ElCont\UploadController as Image;
 
         $image_name = $_POST['image_name'];
 
+        $allowed = ['jpg', 'jpeg', 'gif'];
+        $extension = pathinfo($_FILES['profile_img']['name'],PATHINFO_EXTENSION);
+        if (in_array($extension, $allowed)) {
 
-        if($image->upload_image($realname, $image_name)){
+            if($image->upload_image($realname, $image_name)){
 
-            move_uploaded_file($_FILES["profile_img"]["tmp_name"], $path);
+                move_uploaded_file($_FILES["profile_img"]["tmp_name"], $path);
 
-            $owl = $image->get_image();
+                $owl = $image->get_image();
 
             
+            }
+        }
+        else {
+           $errors[] = "file not allowed";
         }
 
+      
+
+    
+
+     
 
 }?>
 
 <div class="container">
     <div class="row">
         <div class="col-md-6 offset-md-4 p-5 ">
+            <?php 
+
+            if(!empty($errors)){
+                foreach($errors as $error) {?>
+
+                    <div class="alert alert-danger" role="alert">
+                        <?php echo $error;?>
+                    </div>
+            <?php }}?>
             <h1>Upload Image</h1>
-<!--             <img src="<?php echo $owl;?>" width="250" height="250" alt=""> -->
             <form action="" enctype="multipart/form-data" method="post">
+
+
                 <div class="form-group">
                     <label for="exampleInputFile">File input</label>
                     <input type="file" name="profile_img" class="form-control-file" id="exampleInputFile" aria-describedby="fileHelp">

@@ -26,18 +26,10 @@ class UploadController {
     public function upload_image($filename, $image_name)
     {
 
-        $this->uploadfile = $this->directory . basename($filename);
-
-        try{
-            $sql = "INSERT INTO images (img, image_name) VALUES (?, ?)";
-            $stmt = $this->connect->prepare($sql)->execute([$filename, $image_name]);
-            return $stmt; 
-        }
-        catch(PDOExeception $e)
-        {
-            echo $e->getMessage();
-        }
-
+        $sql = "INSERT INTO images (img, image_name) VALUES (?, ?)";
+        $stmt = $this->connect->prepare($sql)->execute([$filename, $image_name]);
+        return $stmt; 
+  
 
     }
 
@@ -57,7 +49,6 @@ class UploadController {
             return $result;
 
         }
-
         catch(PDOExeception $e)
         {
             echo $e->getMessage();
